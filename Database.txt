@@ -1,0 +1,1 @@
+﻿Aşağıdaki bağlantıdaki "images" klasörü ve "styles.csv" dosyası indirilmeli ve kodun gerekli path değişiklikleri yapılmalıdır: https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small. Kodun doğru şekilde çalışabilmesi için "ara-proje-feature-extracting.ipynb" kodunun çıktısı olarak gelen pickle dosyalarının path'leri de koda yerleştirilmelidir.

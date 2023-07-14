@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Images</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #ff8080;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            padding: 20px;
+        }
+
+        .middle-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .recommendation-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-card {
+            margin: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            width: 150px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .image-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .image-card img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .image-card p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        Fashion Recommendation System
+    </div>
+    <div class="middle-section">
+        <h2>Your Choice</h2>
+        <img src="{{ url_for('static', filename='uploads/' + uploaded_image) }}" alt="Your Choice" width="200">
+    </div>
+    <div class="recommendation-section">
+        <h2>You may also like:</h2>
+        <div class="images-container">
+            {% for item in recommended_images %}
+            <div class="image-card">
+                <img src="{{ item['image_path'] }}" alt="Recommended Image" width="100">
+                <p>{{ item['productDisplayName'] }}</p>
+                <p>ID: {{ item['id'] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

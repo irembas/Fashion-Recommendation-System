@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+    <style>
+        body {
+            background-color: #ffe0e0;
+            text-align: center;
+        }
+
+        #title {
+            margin-top: 30px;
+            font-size: 32px;
+            color: #ff8080;
+        }
+
+        #upload-area {
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 40px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center; /* Align content to center */
+        }
+
+        #upload-area:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .file-input-label {
+            display: inline-block;
+            background-color: #ff8080;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none; /* Remove border */
+            box-shadow: none; /* Remove box shadow */
+            width: 140px; /* Set width */
+        }
+
+        .file-input-label:hover {
+            background-color: #ff4d4d;
+        }
+
+        .file-input-label span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+        }
+
+        .upload-button {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #ff8080;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none; /* Remove border */
+            box-shadow: none; /* Remove box shadow */
+            width: 140px; /* Set width */
+        }
+
+        .upload-button:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">✩ Fashion Recommendation System</div>
+    <div id="upload-area">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="file-input-wrapper">
+                <label for="file-input" class="file-input-label">
+                    <span>Select a File</span>
+                    <input type="file" id="file-input" name="file">
+                </label>
+            </div>
+            <button type="submit" class="upload-button">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
