@@ -30,3 +30,4 @@ Please note that the system requires the pre-computed image features and a list 
 
 # Note:
 This project is a showcase of how machine learning and specifically deep learning techniques can be used in the fashion industry to provide an enhanced shopping experience. The recommendation system is basic and there are several ways to improve and optimize it further, like using a more specific dataset or utilizing more complex models for better accuracy. The system does not include functionalities like product tracking, user authentication, or transaction handling, which are crucial aspects of a real-world fashion e-commerce application.
+
